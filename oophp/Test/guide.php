@@ -10,7 +10,7 @@
 
 include("autoloader.php"); 
 
-$dice = New CDice(); 
+$dice = New CDice($_GET['faces']); 
 
 $times = $_GET['rolls']; 
 $dice->Roll($times); 

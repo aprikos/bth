@@ -3,8 +3,12 @@
 class CHistogram  {
 	public $numbers; 
 	public function __construct($numbers) {
+		echo __METHOD__;
 		$this->numbers = $numbers;
-	} 
+	}
+	public function __destruct() {
+		echo __METHOD__; 
+	}
 	public function GetHistogram() {
 		$histogram = array(); 
 		foreach($this->numbers as $val) {
