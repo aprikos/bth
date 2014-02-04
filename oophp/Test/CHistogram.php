@@ -34,4 +34,22 @@ class CHistogram  {
 		$html .= "</ul>";
 		return $html;  
 	}
+	public function GetHistogramIncludeEmpty($highestnumber) {
+
+		$histogram = $this->GetHistogram();		
+
+		$html = "<ul>";
+		for($key = 1; $key <= $highestnumber; $key++) {
+			$html .= "<li>{$key}: ";
+			if(isset($histogram[$key])) {
+				$val = $histogram[$key];
+				for($i = 0; $i < $val; $i++) {
+					$html .= "*";
+				} 
+			} 
+			$html .= "</li>"; 
+		}
+		$html .= "</ul>";
+		return $html;
+	}
 }

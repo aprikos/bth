@@ -20,7 +20,7 @@ echo "<p>En tärning kastas <a href='?rolls=6'>6</a>, <a href='?rolls=12'>12</a>
 
 $histogram = New CHistogram($rolls);
 
-echo $histogram->GetHistogramHTML();
+echo $histogram->GetHistogramIncludeEmpty($_GET['faces']);
 
 echo "<p>Kastserien var "; 
 foreach($rolls as $val) {
