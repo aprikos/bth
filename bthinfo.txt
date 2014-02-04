@@ -1,0 +1,10 @@
+malv13
+Tilda13!
+
+https://studentportal.bth.se/web/studentportal.nsf/web.xsp/larplattform_itslearning2
+
+sftp.student.bth.se / ssh.student.bth.se port 22
+samma inlogg som överallt annat! 
+
+Do not forget: 
+http://www.student.bth.se/~malv13/

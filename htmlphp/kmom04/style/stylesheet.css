@@ -1,0 +1,124 @@
+html {background: #996699; overflow-y: scroll;}
+
+body#me a#me-,
+body#report a#report-,
+body#guide a#guide-,
+body#source a#source-,
+body#test a#test-,
+body#style a#style- {color: #FFF;}
+
+h1 {
+  text-transform: uppercase;
+  border-bottom: 4px double #333333;
+}
+
+a:link {color:#663366; text-decoration:none;}
+a:visited {color:#663366; text-decoration:none;}
+a:hover {color:#663366; text-decoration:underline;}  
+a:active {color:#663366;}
+
+/* wrapper */
+#wrapper {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto; 
+  width: 934px;
+  padding: 8px;
+  background: #e1c3d8;
+  border: 2px solid #663366;
+  font-family: Georgia, serif;
+  color: #333333;
+  /* rounded corners */
+  -o-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  /* box shadow */
+  -o-box-shadow: 0px 0px 30px #FFF;
+  -ms-box-shadow: 0px 0px 30px #FFF;
+  -moz-box-shadow: 0px 0px 30px #FFF;
+  -webkit-box-shadow: 0px 0px 30px #FFF;
+  box-shadow: 0px 0px 30px #FFF;
+}
+
+/* header */
+header {}
+
+#top {
+	background: white;
+	color: black;
+	font-family: verdana;
+	font-size: small;	
+	padding: 5px;
+	margin: -9px;
+	border: 1px solid #663366;
+}
+
+#login {
+  float: right;
+}
+
+/* navigation menu */
+nav.navmenu {
+    display: block;
+    padding: 0.2em 1em 0 1em;
+    background: #996699;
+    border: 1px solid #663366;
+}
+nav.navmenu a {
+    padding: 0.3em 1em 0 1em;
+    color: #e1c3d8;
+    font-family: Tahoma, Geneva, sans-serif;
+    text-decoration:none;
+}
+nav.navmenu a:link    { }
+nav.navmenu a:visited { }
+nav.navmenu a:hover   { color: #663366; text-shadow: 0px 0px 10px #fff; }
+nav.navmenu a:active  { }
+
+/* presentational picture, startpage */
+.prespic {
+	float: right;
+	display: block;
+	padding: 95px 15px 15px 15px;
+}
+
+figcaption { 
+	font-size: small;
+	font-style: italic;
+}
+
+/* content */
+#content { 
+	background: white;
+	background: hsla(0,50%,317%,0.33);
+	border: 1px solid #663366;
+	border-top: 0px;
+	padding: 15px;
+  min-height: 300px;
+}
+
+#testmenu {
+  float: left;
+  width: 150px;
+}
+
+#testcontent {
+  float: right;
+  width: 743px;
+  min-height: 300px;
+}
+
+/* footer */
+footer {
+	padding: 15px 15px 0px 15px;
+	font-size: small;
+}
+
+footer.byline {
+	font-size: 1.0em;
+	font-style: italic;
+	padding: 30px 15px 15px 150px;
+}

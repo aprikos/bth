@@ -1,0 +1,132 @@
+/**
+ * General elements
+ */
+body {
+  color: #333;
+  font-family: georgia, serif;
+}
+
+a:link { color: #CC0000; }
+a:visited { color: #800000; } 
+a:hover { color: #800000; }
+a:active { color: #CC0000; }
+ 
+/**
+ * Layout of the main page elements 
+ */
+#wrapper {
+  margin: 0 auto;
+  width: 980px; 
+  padding: 10px;
+}
+ 
+ 
+/**
+ * Layout for header
+ */
+#header {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.navbar {
+  background: #CCC;
+  border: 4px solid #E6E6E6;
+  height: 52px; 
+}
+
+.navbar a {
+  display: block;  
+  float: left;
+  margin: 20px;
+}
+
+.navbar a:link { 
+  font-size: large;
+  letter-spacing: 0.1em; 
+  color: #333;
+  text-decoration: none;       
+    /* CSS3 Transition Effect */
+  -webkit-transition: all 0.3s ease-out;   /* Safari & Chrome */
+  -moz-transition: all 0.3s ease-out;    /* Firefox */
+  -o-transition: all 0.3s ease-out;    /* Opera */
+
+}
+.navbar a:visited { 
+  color: #333; 
+  text-decoration: none; 
+}
+.navbar a:hover { 
+  color: #333; 
+  text-decoration: none; 
+  text-shadow: 0px 0px 7px #099; 
+    /* CSS3 Transition Effect */
+  -webkit-transition: all 0.3s ease-out;   /* Safari & Chrome */
+  -moz-transition: all 0.3s ease-out;    /* Firefox */
+  -o-transition: all 0.3s ease-out;    /* Opera */
+}
+.navbar a:active { color: #333; } 
+
+.navbar li {
+}
+
+.sitetitle {
+  position: absolute;
+  top: 6px;
+  left: 130px;
+  font-size: 48px;
+}
+ 
+.siteslogan {
+  position: absolute;
+  top: 65px;
+  left: 130px;
+  font-style: italic;
+  color: #666;
+}
+ 
+/**
+ * Layout for main
+ */
+#main {
+  min-height: 20em;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+#main h1 {
+  font-family: georgia;
+  font-size: x-large;
+}
+
+#main h2 {
+  font-size: large;
+}
+
+hr {
+  border: 1px solid #CCC;
+}
+ 
+.me {
+  display: block;
+  float: right;
+  padding: 40px 15px 15px 15px;
+}
+
+figcaption {
+  font-size: small;
+  font-style: italic;
+}
+
+/**
+ * Layout for footer
+ */
+#footer {
+  margin-top: 40px;
+  border-top: 1px solid #ccc;
+  padding-top: 15px;
+}
+ 
+.sitefooter {
+  color: #666;
+}

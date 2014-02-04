@@ -1,0 +1,5 @@
+Radix is a PHP-boilerplate/framework for small websites. Radix was built by Matilda Lorentzon as part of learning web programming. 
+
+	Name: Matilda 'itse' Lorentzon
+	Mail: tilda.lorentzon@gmail.com
+	Site: http://www.myexpamplesite.com/
