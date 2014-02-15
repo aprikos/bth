@@ -8,13 +8,16 @@ class CDice {
 	public function __destruct() {
 		echo __METHOD__;
 	}
-	private $rolls = array(); 
+	protected $rolls = array(); 
 	private $faces;
 
 	public function GetRollsAsArray() {
 		return $this->rolls; 
 	}
 
+	public function GetFaces() {
+		return $this->faces;
+	}
 
 	public function Roll($times) {
 		$this->rolls = array(); 
@@ -35,3 +38,4 @@ class CDice {
 
 	}
 }
+

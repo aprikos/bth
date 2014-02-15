@@ -14,7 +14,7 @@ $dice = New CDice($_GET['faces']);
 
 $times = $_GET['rolls']; 
 $dice->Roll($times); 
-$rolls = $dice->GetRollsAsArray; 
+$rolls = $dice->GetRollsAsArray(); 
 
 echo "<p>En tärning kastas <a href='?rolls=6&faces=6'>6 gånger med 6 sidor</a>, <a href='?rolls=12&faces=12'>12 gånger med 12 sidor</a> eller <a href='?rolls=24&faces=24'>24 gånger med 24 sidor</a> gånger, här är resultatet.</p>";	
 
