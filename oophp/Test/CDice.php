@@ -2,11 +2,9 @@
 
 class CDice {
 	public function __construct($faces = 6) {
-		echo __METHOD__;
 		$this->faces = $faces; 
 	}
 	public function __destruct() {
-		echo __METHOD__;
 	}
 	protected $rolls = array(); 
 	private $faces;
