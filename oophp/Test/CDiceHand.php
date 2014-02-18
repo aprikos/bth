@@ -4,7 +4,7 @@ class CDiceHand {
 	private $dices;
 	private $numDices; 
 
-	public function __construct($numDices = 5) {
+	public function __construct($numDices = 2) {
 		$this->dices = array();
 		
 		for($i = 0; $i < $numDices; $i++) {
@@ -37,4 +37,19 @@ class CDiceHand {
 		$html .= "</ul>"; 
 		return $html; 
 	}
+
+	public function SaveTotal($current) {
+		if(isset($_SESSION['total'])) {
+			$_SESSION['total'] = $_SESSION['total'] + $current; 
+		} else {
+			$_SESSION['total'] = $current; 
+		}
+
+	}
+
+	public function ResetTotal() {
+		$_SESSION['total'] = 0; 
+	}
 }
+
+

@@ -4,22 +4,42 @@
 <title>oophp20</title>
 <link rel="stylesheet" href="stylesheet.css">
 
-<h1>En tärning</h1>
+<h1>Kasta tärning - spelet 21</h1>
+
+<p>Försök komma så nära 21 som möjligt utan att gå över!</p>
 
 <?php 
 
 include("autoloader.php"); 
 
+session_name('game'); 
+session_start();
+
+
 $dice = New CDiceHand(); 
 
-$dice->Roll();
+if(isset($_GET['reset'])) {
+	$dice->ResetTotal(); 
+}
 
-echo $dice->GetRollsAsImageList(); 
 
+if(isset($_GET['roll'])) {
+	$dice->Roll();
+	echo $dice->GetRollsAsImageList(); 
+} 
 
-echo "<p><a href='guide3.php'>Klicka här</a> för att kasta tärningarna igen.</p>";
+echo "<p><a href='?roll'>Klicka här</a> för att kasta tärningarna.</p>";
 
-echo "<p>Den totala summan är " . $dice->GetTotal() . ".</p>";
+$total = $dice->GetTotal();
+
+echo "<p>Den totala summan av handen är " . $total . ".</p>";
+
+$dice->SaveTotal($total); 
+
+echo "<p>Den totala summan är " . ($_SESSION['total']) . ".</p>";
+
+echo "<p><a href='?reset'>Klicka här</a> för att nollställa räknaren och börja om spelet.</p>";
+
 
 ?>
 

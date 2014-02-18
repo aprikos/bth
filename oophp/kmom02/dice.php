@@ -1,44 +1,23 @@
 <?php 
+/**
+ * This is a Radix pagecontroller.
+ *
+ */
+// Include the essential config-file which also creates the $Radix variable with its defaults.
+include(__DIR__.'/config.php'); 
+ 
+ 
+// Do it and store it all in variables in the Radix container.
+$Radix['title'] = "Tärningsspelet";
 
-session_start();
+$Radix['stylesheets'][] = 'css/dice.css';
 
-$_SESSION['round'] = $_POST;
-
-print_r("$_SESSION['round']");
-
-class Dice {
-	public function throwDice() {
-		return rand(1,6);
-	}
-}
-
-class Round {
-	public $round_score = 
-	public function newRound() {
-		echo 	"<input type='submit' formmethod='post' name='round' value='Spara omgången'>";
-	}
-}
+ob_start(); 
+include("dice/dice.php"); 
+$Radix['main'] = ob_get_contents(); 
+ob_end_clean();
 
 
-$dice = new Dice();
-$round = new Round():
-$result = 0;
-
-
-while ($result < 100) {
-	$throw = $dice->throwDice();
-	if($throw == 1) {
-		echo "Oops! You lost :*";
-		$newround = $round->newRound();
-		echo $newround; 
-		exit();
-	} else {
-		$result = $result + $throw;
-		echo $result . "<br>";
-		echo $round->newRound();
-		echo "<button>Kasta tärningen</button>";
-	}
-}
-
-
-?>
+ 
+// Finally, leave it all to the rendering phase of Radix.
+include(Radix_THEME_PATH);
