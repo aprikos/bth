@@ -27,6 +27,10 @@ class CDice {
 		}
 	}
 
+	public function SetRolls($rolls) {
+		$this->rolls = $rolls; 
+	}
+
 	public function GetTotal() {
 		return array_sum($this->rolls); 
 	}
